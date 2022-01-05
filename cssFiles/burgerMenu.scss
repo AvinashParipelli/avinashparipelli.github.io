@@ -1,0 +1,133 @@
+
+
+
+    nav{
+        
+        pointer-events: none;
+        top: 60px;
+        opacity: 0;
+        transform: translateX(-20px);
+        transition: opacity 0.3s ease-in,transform 0.3s ease-in;
+        text-align: left;
+        position: absolute;
+        z-index: 111;
+        background-color: rgb(87, 84, 84);
+        
+        min-height: 100vh;
+        width: 100vw;
+        .collection{
+            background-color: blanchedalmond;
+           
+            
+            
+            .coll{
+                margin: 0 2em;
+                padding: 0.5em;
+                border-bottom: 1px solid rgba(87, 84, 84,0.3);
+                a{
+                    display: flex;
+                    justify-content: space-between;
+                    width: auto;
+                    font-size: 20px;
+                    color: black; 
+                    padding-left: 0.2em;
+                    text-align: left;  
+                }
+                .arrow{
+                    float: right;
+                }
+
+            }
+            
+        }
+        .userdetails{
+            margin: 2em 0;
+            
+            .coll{
+                margin: 0 2em;
+                padding: 0.5em;
+                
+                a{
+                    width: auto;
+                    font-size: 16px;
+                    color: rgb(255, 255, 255); 
+                    padding-left: 0.2em;
+                    text-align: left;  
+                }
+            }
+        }
+       
+    }
+    nav.active{
+        opacity: 1;
+        pointer-events: all;
+        transform: translateX(0);
+    }
+
+  
+.incoll{
+    top:60px;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.3s ease-in,transform 0.3s ease-in;
+    text-align: left;
+    position: absolute;
+    
+    
+    width: 100vw;
+    
+    
+    .collection{
+        background-color: blanchedalmond;
+        height: 100vh;
+        padding: 1em 0;
+        .coll{
+            margin: 0 2em;
+            padding: 0.5em;
+            
+            border-bottom: 1px solid rgba(87, 84, 84,0.3);
+            a{
+                display: flex;
+                justify-content: space-between;
+                width: auto;
+                font-size: 20px;
+                color: black; 
+                padding-left: 0.2em;
+                text-align: left;  
+            }
+            
+
+        }
+        
+    }
+    
+   
+}
+
+.incoll.active{
+    opacity: 1;
+    pointer-events: all;
+    transform: translateX(0);
+}
+
+.backarrow{
+    display: flex;
+    justify-content: space-between;
+}
+.back-arrow-text{
+    color: black;
+    font-size: 35px;
+    padding-right: 30px;
+}
+#closeBurgerMenu{
+    display: none;
+}
+.burger-menu{
+    display: none;
+}
+@media only screen and (max-width: 900px){
+    .burger-menu{
+        display: block;
+    }
+}

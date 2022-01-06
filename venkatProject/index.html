@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <section class="main-section">
+
+        <table>
+
+            <tr>
+                
+                <td class="gotobutton">
+                    <a href="https://banners.dfbanners.com/redirect.aspx?pid=61073&bid=10098">Goto Link</a>
+                   </td>
+                <td class="link"><a href="https://banners.dfbanners.com/redirect.aspx?pid=61073&bid=10098">https://banners.dfbanners.com/redirect.aspx?pid=61073&bid=10098</a>
+                </td>
+               
+                <td class="textbox">
+                    <input type="text" value="https://banners.dfbanners.com/redirect.aspx?pid=61073&bid=10098" id="myInput">
+                    <button onclick="myFunction()"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#ffff"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg></button>
+                </td>
+            </tr>
+          </table>
+    </section>
+    <script>
+        function myFunction() {
+            /* Get the text field */
+            var copyText = document.getElementById("myInput");
+          
+            /* Select the text field */
+            copyText.select();
+            copyText.setSelectionRange(0, 99999); /* For mobile devices */
+          
+             /* Copy the text inside the text field */
+            navigator.clipboard.writeText(copyText.value);
+          
+            /* Alert the copied text */
+            alert("Copied the text: " + copyText.value);
+          }
+    </script>
+
+</body>
+</html>

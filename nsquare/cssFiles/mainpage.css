@@ -28,7 +28,7 @@
   border-width: 15px;
   border-image-source: linear-gradient(90deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
   background-size: auto 50%;
-  background-image: url(/images/bg-greengold-elephant.jpg);
+  background-image: url("../images/bg-greengold-elephant.jpg");
 }
 
 .background .bg-1 .bg-1-gradient {
@@ -244,8 +244,8 @@
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(253, 239, 212, 0.8)), to(#b8cdbd)), url(/images/bg-lightyellow.jpg);
-  background-image: linear-gradient(0deg, rgba(253, 239, 212, 0.8), #b8cdbd), url(/images/bg-lightyellow.jpg);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(253, 239, 212, 0.8)), to(#b8cdbd)), url("../images/bg-lightyellow.jpg");
+  background-image: linear-gradient(0deg, rgba(253, 239, 212, 0.8), #b8cdbd), url("../images/bg-lightyellow.jpg");
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -286,7 +286,6 @@
 }
 
 .section-features .features-image img {
-  padding: 3px;
   width: 200px;
   height: 250px;
   -o-object-fit: cover;
@@ -296,7 +295,10 @@
 .section-features .features-image .img2 {
   width: 230px;
   height: 280px;
-  border: 2px solid var(--color-green);
+  border: 10px solid;
+  border-image-slice: 1;
+  border-width: 10px;
+  border-image-source: linear-gradient(34deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
 }
 
 .section-discover {
@@ -354,7 +356,7 @@
 .footer {
   width: 100vw;
   height: 500px;
-  background-image: url(/images/footer.jpg);
+  background-image: url("../images/footer.jpg");
   background-size: auto 500px;
   background-position: 48% 0;
 }
@@ -454,7 +456,7 @@
 
 @media only screen and (max-width: 1080px) {
   .footer {
-    background-image: url(/images/footer-small.jpg);
+    background-image: url("../images/footer-small.jpg");
     background-position: 50% 0;
   }
 }
@@ -517,14 +519,16 @@
     margin-top: 30px;
   }
   .section-features .features-image img {
-    padding: 3px;
     width: 28vw;
     height: 35vw;
   }
   .section-features .features-image .img2 {
     width: 30vw;
     height: 42vw;
-    border: 2px solid var(--color-green);
+    border: 5px solid;
+    border-image-slice: 1;
+    border-width: 5px;
+    border-image-source: linear-gradient(34deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
   }
   .section-discover {
     -ms-grid-columns: 1fr;
@@ -536,7 +540,7 @@
 
 @media only screen and (max-width: 500px) {
   .footer {
-    background-image: url(/images/footer-extrasmall.jpg);
+    background-image: url("../images/footer-extrasmall.jpg");
     background-position: 60% 0;
   }
 }

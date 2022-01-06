@@ -449,12 +449,12 @@
   }
   .section-features .features-image img {
     padding: 3px;
-    width: 120px;
-    height: 180px;
+    width: 28vw;
+    height: 35vw;
   }
   .section-features .features-image .img2 {
-    width: 130px;
-    height: 200px;
+    width: 30vw;
+    height: 42vw;
     border: 2px solid grey;
   }
   .section-discover {
@@ -498,19 +498,6 @@
     font-size: 20px;
     text-align: center;
     padding: 20px 10px;
-  }
-  .section-features .features-image {
-    margin-top: 30px;
-  }
-  .section-features .features-image img {
-    padding: 3px;
-    width: 80px;
-    height: 130px;
-  }
-  .section-features .features-image .img2 {
-    width: 90px;
-    height: 150px;
-    border: 2px solid grey;
   }
 }
 /*# sourceMappingURL=mainpage.css.map */

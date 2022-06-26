@@ -60,6 +60,134 @@
 <svg >
     <line x1="40" y1="10" x2="1000" y2="10" />
 </svg>
+<h4>array properties</h4>
+<div class="code">
+    <p>import numpy as np</p>
+    <p>arr = np.array([1, 2, 3, 4, 5])</p>
+    <p>arr.ndim <b>#check the Dimensions</b></p>
+    <p>arr.dtype <b>#checking datatype</b></p>
+</div>
+<svg >
+    <line x1="40" y1="10" x2="1000" y2="10" />
+</svg>
+<h4>Access Array Elements</h4>
+<div class="notes">
+    <p>The indexes in NumPy arrays start with 0, meaning that the first element has index 0, and the second has index 1 etc.</p>
+</div>
+<div class="code">
+    <p>
+        arr = np.array([1, 2, 3, 4])
+    </p>
+    <p>print(arr[0]) <b>#1 is printed in output</b></p>
+    <p>arr = np.array([[1,2,3,4,5], [6,7,8,9,10]])</p>
+    <p>print(arr[1, 4]) <b>#5th element on 2nd row:"10"</b></p>
+</div>
+<svg >
+    <line x1="40" y1="10" x2="1000" y2="10" />
+</svg>
+<h2>Array Slicing</h2>
+
+<h3>&ensp; Slicing arrays</h3>
+<div class="notes">
+    <p>Slicing in python means taking elements from one given index to another given index.</p>
+    <p>We pass slice instead of index like this: </p><p class="hilt">[start:end] </p>
+    <p>We can also define the step, like this: </p><p class="hilt">[start:end:step]</p>
+</div>
+<div class="code">
+    <p>arr = np.array([1, 2, 3, 4, 5, 6, 7])</p>
+    <p>arr[1:5]<b>&ensp; #output is [2 3 4 5]</b></p>
+    
+    <p>arr[4:] <b>&ensp; #output is [5 6 7]</b></p>
+    <p>arr[:4] <b> &ensp; #output is [1 2 3 4]</b></p>
+</div>
+<h3>&ensp; Negative Slicing </h3>
+<div class="notes">
+    <p>Use the minus operator to refer to an index from the end:</p>
+</div>
+<div class="code">
+    <p>
+        arr[-3:-1]  <b>&ensp;#output is [5 6]</b> <br>
+    </p>
+    <p>arr[:-2] <b>&ensp; #output is [1 2 3 4 5]</b></p>
+    <p>arr[-4:] <b>&ensp; #output is [4 5 6 7]</b></p>
+</div>
+<h3>&ensp; STEP</h3>
+<div class="notes">
+    <p>Use the step value to determine the step of the slicing:</p>
+</div>
+<div class="code">
+    <p>arr[1:5:2] <b>&ensp; #output is [2 4] </b></p>
+    <p>arr[::2] <b>&ensp; #output is [1 3 5 7]</b></p>
+</div>
+<h3>&ensp; Slicing 2-D Arrays</h3>
+<div class="code">
+    <p>arr = np.array([[1, 2, 3, 4, 5], [6, 7, 8, 9, 10]])</p>
+    <p>
+        arr[1, 1:4] <b>&ensp; #output is [7,8,9] </b>
+    </p>
+    <p>
+        arr[0:2, 2] <b>&ensp; #output is [3,8] </b>
+    </p>
+    <p>
+        arr[0:2, 1:4] <b>&ensp; #output is [[2 3 4]
+            [7 8 9]] </b>
+    </p>
+    <p>
+        arr[0:1, 1:3] <b>&ensp; #output is [[2 3]] </b>
+    </p>
+    
+</div>
+<svg >
+    <line x1="40" y1="10" x2="1000" y2="10" />
+</svg>
+
+<h2>Data Types</h2>
+<div class="notes">
+    <p>NumPy has some extra data types, and Bbelow is a list of all data types in NumPy and the characters used to represent them.</p>
+    <p>&ensp;  - <b>i</b>  : integer <br>
+        &ensp;  - <b>b</b>  : boolean <br>
+        &ensp;  - <b>u</b> : unsigned integer <br>
+        &ensp;  - <b>f</b> : float <br>
+        &ensp;  - <b>c</b> : complex float <br>
+        &ensp;  - <b>m</b> : timedelta <br>
+        &ensp;  - <b>M</b>  : datetime <br>
+        &ensp;  - <b>O</b>  : object <br>
+        &ensp;  - <b>S</b>  : string <br>
+        &ensp;  - <b>U</b> : unicode string <br>
+        &ensp;  - <b>V</b>  : fixed chunk of memory for</p> 
+        
+</div>
+<h4>&ensp; Checking the Data Type</h4>
+        <div class="code">
+            <p>arr = np.array([1, 2, 3, 4])</p>
+            <p>arr.dtype <b> &ensp;#output is int64 </b></p>
+        </div>
+<h4>&ensp; Creating Arrays With a Defined Data <br> &ensp; Type</h4>
+        <div class="code">
+            <p>arr = np.array([1, 2, 3, 4], dtype='S')</p>
+            <p>arr <b> &ensp; #[b'1' b'2' b'3' b'4'] </b></p>
+            
+        </div>
+        <div class="notes">
+            <p>If a type is given in which elements can't be casted then NumPy will raise a </p> <p class="hilt">ValueError</p>
+        </div>
+
+<h4>&ensp;Converting Data Type on Existing <br> &ensp; Arrays </h4>
+<div class="code">
+    <p>
+        arr = np.array([1.1, 2.1, 3.1])</p>
+        <p>arr.astype('i') <b>&ensp;#[1,2,3]</b></p>
+        <p> arr.astype('U') <b>&ensp;#['1','2','3']</b></p>
+        <p>arr.astype(int) <b>&ensp;#[1,2,3]</p>
+
+</div>
+<div class="notes">
+    <p>The data type can be specified using a string, like 'f' for float, 'i' for integer etc. or you can use the data type directly like float for float and int for integer.</p>
+</div>
+<svg >
+    <line x1="40" y1="10" x2="1000" y2="10" />
+</svg>
+
 </article>
 </body>
 </html>

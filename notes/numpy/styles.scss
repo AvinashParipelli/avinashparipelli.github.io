@@ -1,0 +1,104 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Finger+Paint&family=Grand+Hotel&display=swap');
+
+body {
+    background-color: #5cdb94;;
+
+ 
+}
+article{
+    width: 550px;
+    position: absolute;
+    left: 50%;
+    min-height: 100%;
+    transform: translate(-50%,0);
+    border: 5px double #389583;
+    padding: 10px;
+}
+h2,h3,h4{
+    font-family: 'Bebas Neue', cursive;
+    color: #389583;
+    margin-left: 20px;
+  
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+  h1{
+    font-family: 'Finger Paint', cursive;
+    font-size: 80px;
+    color: #033a6c;
+    text-align: center;
+   
+    
+  }
+
+ svg{
+   height: 30px;
+   width: 100%;
+ }
+  line{
+    stroke:#389583;
+    stroke-width:3
+  }
+  h2{
+    
+    font-size: 40px;
+  }
+  h3{
+    
+    font-size: 35px;
+  }
+  h4{
+    font-size: 30px;
+
+  }
+  .notes{
+    margin-left: 80px;
+    padding-bottom: 10px;
+  }
+  .notes p{
+    font-size: 20px;
+    display: inline-block;
+    font-family: 'Grand Hotel', cursive;
+    color: #033a6c;
+  }
+  p{
+    
+    display: inline-block;
+    font-family: 'Bebas Neue', cursive;
+
+  }
+
+  .hilt{
+    background-color: yellow;
+    display: inline-block;
+  }
+  
+  .italic{
+    font-style: italic;
+  }
+  .imp{
+    color: red;
+  }
+
+  .code{
+    margin-left: 100px;
+    margin-bottom: 10px;
+    
+    background-color: #033a6c;
+    padding: 20px;
+    padding-bottom: 60px;
+    border: 2px dashed #8de4af;
+  }
+  .code p{
+    padding-bottom: 10px;
+    display: block;
+    color: #389583;
+    font-size: 20px;
+    font-family: 'Courier Prime', monospace;
+
+  }
+  

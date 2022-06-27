@@ -37,7 +37,7 @@
 </svg>
 <h4>Creating an array</h4>
 <div class="notes">
-    <p>We can create a NumPy ndarray object by using the &nbsp<p class="hilt">array()</p>  function.</p>
+    <p>We can create a NumPy ndarray object by using the &nbsp</p><p class="hilt">array()</p> <p>function.</p> 
 </div>
 <div class="code">
     <p>arr = np.array([1, 2, 3, 4, 5])<br></p>
@@ -187,7 +187,20 @@
 <svg >
     <line x1="40" y1="10" x2="1000" y2="10" />
 </svg>
+<h3>NumPy Array Copy vs View</h3>
+<h4> &ensp; The Difference Between Copy and View</h4>
+<div class="notes">
+    <p>The main difference between a copy and a view of an array is that the copy is a new array, and the view is just a view of the original array.</p>
 
+</div>
+<h4>&ensp; COPY</h4>
+<div class="code">
+    <p>arr = np.array([1, 2, 3, 4, 5])</p>
+    <p>x = arr.copy()</p>
+    <p>arr[0] = 42</p>
+    <p>print(arr) <b> &ensp; #[41,2,3,4,5]</b></p>
+    <p>print(x) <b>&ensp; #[1, 2, 3, 4, 5]</b> </p>
+</div>
 </article>
 </body>
 </html>

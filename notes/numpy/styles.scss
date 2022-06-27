@@ -61,7 +61,7 @@ h2,h3,h4{
     padding-bottom: 10px;
   }
   .notes p{
-    font-weight: 100;
+    font-weight: bold;
     font-size: 20px;
     display: inline-block;
     font-family: 'Roboto', sans-serif;
@@ -95,13 +95,24 @@ h2,h3,h4{
     padding-bottom: 60px;
     border: 2px dashed #8de4af;
   }
+  .code p b{
+    color: yellow;
+  }
+
   .code p{
     font-weight: 100;
     padding-bottom: 10px;
     display: block;
-    color: #389583;
+    color: #f1ffd7;
     font-size: 20px;
     font-family: 'Courier Prime', monospace;
 
+
+  }
+  .code p .err{
+    color: rgb(214, 101, 101);
+  }
+  .code p .pass{
+    color: #389538;
   }
   

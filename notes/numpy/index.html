@@ -201,6 +201,66 @@
     <p>print(arr) <b> &ensp; #[41,2,3,4,5]</b></p>
     <p>print(x) <b>&ensp; #[1, 2, 3, 4, 5]</b> </p>
 </div>
+<div class="notes">
+    <p class="hilt">The copy SHOULD NOT be affected by the changes made to the original array.</p>
+</div>
+<h4>&ensp; VIEW</h4>
+<div class="code">
+    <p>arr = np.array([1, 2, 3, 4, 5])</p>
+    <p>x = arr.view()</p>
+    <p>arr[0] = 42</p>
+    <p>print(arr) <b> &ensp; #[42,2,3,4,5]</b></p>
+    <p>print(x) <b>&ensp; #[42, 2, 3, 4, 5]</b> </p>
+</div>
+<div class="notes">
+    <p class="hilt">The view SHOULD be affected by the changes made to the original array.</p>
+</div>
+<h4>&ensp; Check if Array Owns its Data</h4>
+<div class="notes">
+    <p>Every NumPy array has the attribute base that returns None if the array owns the data.</p>
+    <p>Otherwise, the base  attribute refers to the original object.</p>
+</div>
+<div class="code">
+    <p>arr = np.array([1, 2, 3, 4, 5])</p>
+    <p>x = arr.copy() <br>
+        y = arr.view()</p>
+    <p>print(x.base) <b>&ensp; #None</b></p>
+    <p>print(y.base) <b>&ensp; #[1, 2, 3, 4, 5]</b></p>
+</div>
+<div class="notes">
+   <p class="hilt">&ensp; - The copy returns None. <br>
+   &ensp; -  The view returns the original array.</p>
+</div>
+<svg >
+    <line x1="40" y1="10" x2="1000" y2="10" />
+</svg>
+<h3>Array Shape</h3>
+<div class="notes">
+    <p>shape of an array is number of element in each dimension</p>
+</div>
+<div class="code">
+    <p>
+        arr=np.array([[1,2,3][4,5,6]])
+    </p>
+    <p>arr.shape <b>&ensp; #(2,3)</b></p>
+</div>
+<svg >
+    <line x1="40" y1="10" x2="1000" y2="10" />
+</svg>
+<h3>Reshaping an array</h4>
+    <h4>&ensp; Reshape</h4>
+    <div class="notes">
+        <p> in the example below we convet 1-D array into 2-D array</p>
+    </div>
+    <div class="code">
+        <p>
+            arr=np.array([1,2,3,4,5,6,7,8,9,<br>10,11,12])
+        </p>
+        <p>arr.reshape(4,3)</p>
+
+        <p><b>#[[1,2,3][4,5,6][7,8,9][10,11,12]]</b></p>
+    </div>
+    
 </article>
 </body>
 </html>

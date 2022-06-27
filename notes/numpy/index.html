@@ -247,20 +247,96 @@
 <svg >
     <line x1="40" y1="10" x2="1000" y2="10" />
 </svg>
-<h3>Reshaping an array</h4>
+<h3>Reshaping an array</h3>
     <h4>&ensp; Reshape</h4>
     <div class="notes">
         <p> in the example below we convet 1-D array into 2-D array</p>
     </div>
     <div class="code">
         <p>
-            arr=np.array([1,2,3,4,5,6,7,8,9,<br>10,11,12])
+            arr=np.array([1 ,2,3,4,5,6,7,8,9,<br>10,11,12])
         </p>
         <p>arr.reshape(4,3)</p>
 
-        <p><b>#[[1,2,3][4,5,6][7,8,9][10,11,12]]</b></p>
+        <p><b>#[[1 2 3] <br> [4 5 6] <br> [7 8 9] <br> [10 11 12]]</b></p>
     </div>
+    <div class="notes">
+        <p> in the example below we convet 1-D array into 3-D array</p>
+    </div>
+    <div class="code">
+        <p>
+            arr=np.array([1,2,3,4,5,6,7,8,9,<br>10,11,12])
+        </p>
+        <p>arr.reshape(2,3,2)</p>
+       <p><b>#[[[1 2] <br>[3 4] <br>[5 6]] <br> [[7 8] <br>[9 10] <br>[11 12]]]</b></p> 
+    </div>
+    <div class="notes">
+        <p>You can reshape an aready reshaped array</p>
+    </div>
+    <div class="code">
+        <p>
+            arr=np.array([1,2,3,4,5,6,7,8,9,<br>10,11,12])
+        </p>
+        <p>arr.reshape(2,3,2)</p>
+       <p><b>#[[[1 2] <br>[3 4] <br>[5 6]] <br> [[7 8] <br>[9 10] <br>[11 12]]]</b></p> 
+       <p>arr.reshape(4,3)</p>
+
+       <p><b>#[[1 2 3] <br> [4 5 6] <br> [7 8 9] <br> [10 11 12]]</b></p>
+    </div>
+    <div class="notes">
+        <p >Reshape shoud be equal to the array count. else you will get an </p>
+        <p class="imp">error</p>
+
+    </div>
+    <div class="code">
+        <p>
+            arr=np.array([1,2,3,4,5,6,7,8,9,<br>10,11,12])
+        </p>
+        <p>arr.reshape(2,3)</p>
+       <p> <b class="err">[ERROR]:Exception has occurred: ValueError
+    </b></p> 
+    <p><b class="pass"> #cannot reshape array of size 12 into shape (2,3). <br>
+    #2X3= 6. 6 is not equal to array size i.e, 12. </b></p>
+    </div>
+    <div class="notes">
+        <p class="hilt">Reshaped array returns the original array so it is a view</p>
+    </div>
+    <h4>&ensp; unknown dimension</h4>
+    <div class="notes">
+        <p>
+            You can pass one "unknown" dimension  in reshape.
+        </p>
+        <br>
+        <br>
+        <p class="imp">
+            Pass the value as -1
+        </p>
+    </div>
+    <div class="code">
+        <p>
+            arr=np.array([1,2,3,4,5,6,7,8,9,<br>10,11,12])
+        </p>
+        <p>arr.reshape(2,3,-1)</p>
+       <p><b>#[[[1 2] <br>[3 4] <br>[5 6]] <br> [[7 8] <br>[9 10] <br>[11 12]]]</b></p> 
+       <p> <b class="pass">#Numpy will calculate the number for you</b></p>
+       <p><b class="pass">#You can only use one unknow dimension for reshape</b></p>
+    </div>
+    <h4>&ensp; flattening the array</h4>
+    <div class="code">
+        <p>
+            arr=np.array([1,2,3,4],[5,6,7,8],[9,10,11,12]])
+        </p>
+        <p>arr.reshape(-1)</p>
+       <p><b>#[1 2 3 4 5 6 7 8 9 10 11 12 ]</b></p> 
+    </div>
+    <h3>Array Iteration</h3>
+    <div class="code">
+        <p>arr = np.array([[[1, 2], [3, 4]], [[5, 6], [7, 8]]])</p>
+        <p>for x in np.nditer(arr)</p>
+        <p>&ensp; &ensp; print(x)</p>
+        <p><b>#1 2 3 4 5 6 7 8</b></p>
     
+    </div>
 </article>
 </body>
 </html>

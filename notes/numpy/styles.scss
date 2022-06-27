@@ -1,7 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Finger+Paint&family=Grand+Hotel&family=League+Gothic&display=swap');
 body {
-    background-color: #5cdb94;;
+    background-color: white;
 
  
 }
@@ -11,12 +11,12 @@ article{
     left: 50%;
     min-height: 100%;
     transform: translate(-50%,0);
-    border: 5px double #389583;
+    border: 5px double rgb(39, 39, 39);
     padding: 10px;
 }
 h2,h3,h4{
     font-family: 'Bebas Neue', cursive;
-    color: #f1ffd7;
+    color: rgb(39, 39, 39);
     margin-left: 20px;
     letter-spacing: 3px;
   
@@ -29,8 +29,12 @@ h2,h3,h4{
   h1{
     font-family: 'Finger Paint', cursive;
     font-size: 80px;
-    color: #033a6c;
+    color: #f8ef6c;
     text-align: center;
+    text-shadow: -5px 5px 0 rgb(58, 58, 58),
+                          1px 1px 0 rgb(29, 29, 29),
+                         1px -1px 0 rgb(0, 0, 0),
+                        -1px -1px 0 rgb(0, 0, 0);
    
     
   }
@@ -40,7 +44,7 @@ h2,h3,h4{
    width: 100%;
  }
   line{
-    stroke:#389583;
+    stroke:rgb(39, 39, 39);
     stroke-width:3
   }
   h2{
@@ -63,9 +67,9 @@ h2,h3,h4{
   .notes p{
     font-weight: bold;
     font-size: 20px;
-    display: inline-block;
+    display: inline;
     font-family: 'Roboto', sans-serif;
-    color: #033a6c;
+    color: #1d1d1d;
   }
   p{
     
@@ -82,7 +86,7 @@ h2,h3,h4{
   .italic{
     font-style: italic;
   }
-  .imp{
+  .notes .imp{
     color: red;
   }
 
@@ -90,29 +94,29 @@ h2,h3,h4{
     margin-left: 100px;
     margin-bottom: 10px;
     
-    background-color: #033a6c;
+    background: linear-gradient(to bottom right, rgb(97, 97, 97) 0%, #2c2c2c 100%);
     padding: 20px;
     padding-bottom: 60px;
-    border: 2px dashed #8de4af;
+    border-left: 15px solid rgb(31, 31, 31);
   }
   .code p b{
-    color: yellow;
+    color: #279227;
   }
 
   .code p{
     font-weight: 100;
     padding-bottom: 10px;
     display: block;
-    color: #f1ffd7;
+    color: #ffffff;
     font-size: 20px;
     font-family: 'Courier Prime', monospace;
 
 
   }
   .code p .err{
-    color: rgb(214, 101, 101);
+    color: rgb(255, 79, 79);
   }
   .code p .pass{
-    color: #389538;
+    color: rgb(255, 255, 81);
   }
   
